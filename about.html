@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Mim</title>
   <link rel="stylesheet" href="./estilos/style.css">
+  <link rel="stylesheet" href="./estilos/pacman.css">
 </head>
 <body>
-  <header class="cabecalho">
-    <nav class="cabecalho__menu">
-      <a class="cabecalho__menu__links" href="index.html">Home</a>
-      <a class="cabecalho__menu__links" href="about.html">Sobre mim</a>
-    </nav>
+  <header class="top-bar">
+    <div class="menu-bar">
+      <nav class="cabecalho__menu">
+        <a class="cabecalho__menu__links" href="index.html">Home</a>
+        <a class="cabecalho__menu__links" href="about.html">Sobre mim</a>
+      </nav>
+    </div>
   </header>
 
   <main class="apresentacao">
@@ -24,6 +27,7 @@
         <p class="apresentacao__conteudo__texto">
           E Com a chegada da pandemia e o tempo livre, decidi me aprofundar na programação, algo que sempre esteve no meu radar, mas que inicialmente parecia complexo demais. Surpreendentemente, descobri que não era tão difícil quanto imaginava. Investi tempo em cursos online gratuitos, e foi assim que percebi que a programação era realmente minha vocação. Agora, com um horizonte cheio de possibilidades, estou ansioso para continuar minha jornada nesse mundo fascinante. :v
         </p>
+        <canvas id="pacman-canvas" width="800" height="400"></canvas>
       </div>
     </section>
    
@@ -32,5 +36,6 @@
   <footer class="rodape">
     <p>Desenvolvido por Losel</p>
   </footer>
+  <script src="js/pacman-animation.js"></script>
 </body>
 </html>
