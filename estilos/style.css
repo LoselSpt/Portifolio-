@@ -1,14 +1,13 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root {
   --cor-primaria: #000000;
-  --cor-secundaria: #DCF2F1;
-  --cor-terciaria: #7FC7D9;
+  --cor-secundaria: #F0F0F0;
+  --cor-terciaria: #FFFF00;
   --f1: 'Krona One', sans-serif;
   --f2: 'Montserrat', sans-serif;
 
-  
+
 }
 
 * {
@@ -21,24 +20,34 @@ body {
   box-sizing: border-box;
   background-color: var(--cor-primaria);
   color: var(--cor-secundaria);
+  /* Background image removed for professional look */
+  overflow-x: hidden;
+  /* Prevent scrollbar from animations */
 }
-.cabecalho{
+
+.cabecalho {
   padding: 2% 0% 0% 15.5%;
 }
 
-.cabecalho__menu{
+.cabecalho__menu {
   display: flex;
   gap: 80px;
 }
-.cabecalho__menu__links{
-  font-family: var(--f2);
+
+.cabecalho__menu__links {
+  font-family: var(--f1);
   gap: 15px;
   font-size: 1.5rem;
-  color: var(--cor-secundaria);;
+  color: var(--cor-secundaria);
   text-decoration: none;
   font-weight: 600;
+  transition: 0.3s;
 }
 
+.cabecalho__menu__links:hover {
+  color: var(--cor-terciaria);
+  text-shadow: 0 0 10px var(--cor-terciaria);
+}
 
 
 .apresentacao {
@@ -46,21 +55,39 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap:82px;
-  
+  gap: 82px;
+
+}
+
+.apresentacao--sobre {
+  justify-content: center;
+}
+
+.apresentacao--sobre .apresentacao__conteudo {
+  width: 80%;
+  /* Mais largo na página sobre */
+  text-align: center;
+  align-items: center;
 }
 
 .apresentacao__conteudo {
-  width: 50%;
+  width: 100%;
+  /* Full width centered */
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  text-align: center;
+  /* Center text */
+  align-items: center;
+  /* Center items */
 }
 
 .apresentacao__conteudo__titulo {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-family: var(--f1);
 }
+
 .titulo-destaque {
   color: var(--cor-terciaria);
 }
@@ -74,20 +101,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   gap: 30px;
+  width: 100%;
 }
-.apresentacao__links__subtitulo{
+
+.apresentacao__links__subtitulo {
   font-family: var(--f2);
   font-weight: 900;
   font-size: 1.5rem;
 }
+
 .apresentacao__botao {
   /*background-color: #12b07b; */
   display: flex;
   justify-content: center;
   gap: 16px;
-  border: 3.5px double var(--cor-secundaria);
+  border: 2px solid var(--cor-terciaria);
   width: 50%;
   text-align: center;
   border-radius: 8px;
@@ -96,47 +126,367 @@ body {
   padding: 21.5px 0;
   text-decoration: none;
   color: var(--cor-secundaria);
-  font-family: var(--f2);;
+  font-family: var(--f1);
+  transition: 0.3s;
+  background-color: transparent;
 }
 
-.apresentacao__botao:hover{
-  background-color: var(--cor-terciaria);;
-  color: var(--cor-secundaria);
-  transition: 0.5s;
-}
-
-.apresentacao__imagem{
-  width: 50%;
-} 
-
-.rodape{
+.apresentacao__botao:hover {
+  background-color: var(--cor-terciaria);
   color: var(--cor-primaria);
-  background-color: var(--cor-secundaria);;
+  box-shadow: 0 0 15px var(--cor-terciaria);
+  border-color: var(--cor-terciaria);
+  transform: scale(1.05);
+}
+
+.apresentacao__imagem {
+  display: none;
+  /* Ensure image is hidden if present */
+}
+
+.rodape {
+  color: var(--cor-primaria);
+  background-color: var(--cor-terciaria);
+  /* Yellow footer */
   padding: 24px;
   text-align: center;
   font-size: 1.5rem;
-  font-family: var(--f2);
+  font-family: var(--f1);
   font-weight: 600;
-  
+  border-top: none;
 }
+
+/* Seção de Projetos */
+.projetos {
+  padding: 5% 10%;
+  text-align: center;
+  border-top: 2px solid var(--cor-terciaria);
+  border-bottom: 2px solid var(--cor-terciaria);
+  background-color: #0a0a0a;
+  /* Slightly lighter black */
+}
+
+.projetos__titulo {
+  font-family: var(--f1);
+  font-size: 2.5rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 50px;
+  text-shadow: 3px 3px 0px #0000CD;
+  /* Sombra estilo retro */
+}
+
+.projetos__conteiner {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.projetos__card {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 4px double var(--cor-terciaria);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projetos__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px var(--cor-terciaria);
+  border-color: #FF00FF;
+  /* Neon Pink no hover */
+}
+
+.projetos__card__titulo {
+  font-family: var(--f1);
+  font-size: 1.5rem;
+  color: var(--cor-terciaria);
+  margin-bottom: 15px;
+}
+
+.projetos__card__descricao {
+  font-family: var(--f2);
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.projetos__card__botao {
+  background-color: transparent;
+  border: 2px solid var(--cor-secundaria);
+  padding: 10px 20px;
+  color: var(--cor-secundaria);
+  font-family: var(--f1);
+  /* Fonte retro no botão */
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.projetos__card__botao:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+  box-shadow: 0 0 10px var(--cor-secundaria);
+}
+
 @media (max-width: 1200px) {
-  .apresentacao{
+  .apresentacao {
     padding: 5%;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     gap: 0;
   }
-  .cabecalho{
+
+  .cabecalho {
     padding: 10%;
-    
+
   }
 
-.cabeçalho__menu{
-  justfy-content: center;
-}
-.apresentacao__conteudo{
-  width: auto;
-}
-  
+  /* Animations */
+  #background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  /* Pacman Animation */
+  .pacman-runner {
+    position: absolute;
+    bottom: 20px;
+    left: -100px;
+    width: 50px;
+    height: 50px;
+    background: var(--cor-terciaria);
+    border-radius: 50%;
+    animation: run 10s linear infinite, chomp 0.3s linear infinite;
+  }
+
+  /* Mouth created with clip-path */
+  @keyframes chomp {
+    0% {
+      clip-path: polygon(100% 0, 100% 100%, 50% 50%, 0 100%, 0 0);
+    }
+
+    /* Full circle-ish */
+    50% {
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    }
+
+    /* Wait, clip-path is hard for mouth. Conic gradient is better */
+  }
+
+  /* Better Pacman Mouth */
+  .pacman-runner {
+    background: conic-gradient(var(--cor-terciaria) 30deg, transparent 30deg, transparent 330deg, var(--cor-terciaria) 330deg);
+    border-radius: 50%;
+    animation: run 15s linear infinite, chomp 0.4s alternate infinite;
+  }
+
+  @keyframes run {
+    0% {
+      left: -100px;
+      transform: scaleX(1);
+    }
+
+    49.9% {
+      left: 100vw;
+      transform: scaleX(1);
+    }
+
+    50% {
+      left: 100vw;
+      transform: scaleX(-1);
+    }
+
+    /* Turn around */
+    100% {
+      left: -100px;
+      transform: scaleX(-1);
+    }
+  }
+
+  @keyframes chomp {
+    0% {
+      background: conic-gradient(var(--cor-terciaria) 0deg, transparent 0deg, transparent 360deg, var(--cor-terciaria) 360deg);
+    }
+
+    /* Closed */
+    100% {
+      background: conic-gradient(var(--cor-terciaria) 30deg, transparent 30deg, transparent 330deg, var(--cor-terciaria) 330deg);
+    }
+
+    /* Open */
+  }
+
+  /* Ghost Cursor */
+  .ghost-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: #FF0000;
+    /* Blinky Red */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    pointer-events: none;
+    z-index: -1;
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+
+  .ghost-cursor::before,
+  .ghost-cursor::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+  }
+
+  .ghost-cursor::before {
+    left: 8px;
+  }
+
+  .ghost-cursor::after {
+    right: 8px;
+  }
+
+  .ghost-cursor .pupil {
+    /* Pupils */
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 4px;
+    height: 4px;
+    background: blue;
+    border-radius: 50%;
+  }
+
+  /* Random Ghosts */
+  .ghost-random {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: -1;
+    opacity: 0.7;
+    animation: floatGhost 20s infinite linear;
+  }
+
+  .ghost-random::before,
+  .ghost-random::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+  }
+
+  .ghost-random::before {
+    left: 5px;
+  }
+
+  .ghost-random::after {
+    right: 5px;
+  }
+
+  /* Ghost Colors */
+  .ghost-pink {
+    background: #FFB8FF;
+    top: 20%;
+    left: 10%;
+    animation-duration: 25s;
+    animation-delay: 0s;
+  }
+
+  .ghost-cyan {
+    background: #00FFFF;
+    top: 60%;
+    left: 80%;
+    animation-duration: 30s;
+    animation-delay: -5s;
+  }
+
+  .ghost-orange {
+    background: #FFB852;
+    top: 80%;
+    left: 20%;
+    animation-duration: 22s;
+    animation-delay: -10s;
+  }
+
+  @keyframes floatGhost {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    25% {
+      transform: translate(100px, 50px);
+    }
+
+    50% {
+      transform: translate(0, 100px);
+    }
+
+    75% {
+      transform: translate(-100px, 50px);
+    }
+
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  /* Ghost Feet (Wavy bottom) */
+  .ghost-cursor {
+    background: radial-gradient(circle at 10px 40px, transparent 10px, #FF0000 10px) -10px 0;
+    background-size: 40px 50px;
+    /* Adjust for feet */
+    /* Actually, simpler feet with linear gradient or clip-path */
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 83% 90%, 66% 100%, 50% 90%, 33% 100%, 16% 90%);
+    background: #FF0000;
+  }
+
+  /* Dots Line */
+  #background-animation::after {
+    content: '';
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-image: radial-gradient(circle, #FFB8AE 2px, transparent 3px);
+    background-size: 30px 10px;
+    background-repeat: repeat-x;
+    opacity: 0.5;
+  }
+
+  .cabecalho__menu {
+    justify-content: center;
+    gap: 30px;
+    /* Reduzido para mobile */
+  }
+
+  .apresentacao__conteudo {
+    width: auto;
+  }
+
 }

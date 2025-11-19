@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portifólio</title>
@@ -16,42 +16,80 @@
       <a class="cabecalho__menu__links" href="index.html">Home</a>
       <a class="cabecalho__menu__links" href="about.html">Sobre mim</a>
 
-      
+
     </nav>
   </header>
 
 
 
 
-  
 
 
 
 
-  
+
+
   <main class="apresentacao">
     <section class="apresentacao__conteudo">
-      <h1 class="apresentacao__conteudo__titulo">Suba seu negocio digital a outro nível<strong class="titulo-destaque"> com um FrontEnd de qualidade</strong></h1>
+      <h1 class="apresentacao__conteudo__titulo">Suba seu negocio digital a outro nível<strong class="titulo-destaque">
+          com um FrontEnd de qualidade</strong></h1>
       <p class="apresentacao__conteudo__texto">
-        Ola eu me chamo João Vitor tenho 18 anos e sou estudante de programação, estou aprendendo a criar paginas e outros projetos na internet com Html, javascript, Css e python
+        Ola eu me chamo João Vitor tenho 18 anos e sou estudante de programação, estou aprendendo a criar paginas e
+        outros projetos na internet com Html, javascript, Css e python
       </p>
 
       <div class="apresentacao__links">
         <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
 
-        <a class="apresentacao__botao" href="https://www.linkedin.com/in/losel" target="_blank">LinkedIn<img src="./assets/linkedin.png"></a>
-        <a class="apresentacao__botao" href="https://github.com/LoselSpt" target="_blank">Github<img src="./assets/github.png"></a>
+        <a class="apresentacao__botao" href="https://www.linkedin.com/in/losel" target="_blank">LinkedIn<img
+            src="./assets/linkedin.png"></a>
+        <a class="apresentacao__botao" href="https://github.com/LoselSpt" target="_blank">Github<img
+            src="./assets/github.png"></a>
       </div>
     </section>
-    <img class="apresentacao__imagem" src="./assets/sonic.png" alt="foto do sean diaz">
   </main>
+
+  <section class="projetos">
+    <h2 class="projetos__titulo">Meus Projetos</h2>
+    <div class="projetos__conteiner">
+      <div class="projetos__card">
+        <h3 class="projetos__card__titulo">Discriptografio</h3>
+        <p class="projetos__card__descricao">Ferramenta de criptografia e descriptografia para proteger suas mensagens.
+        </p>
+        <a class="projetos__card__botao" href="https://github.com/LoselSpt/Discriptografio" target="_blank">Ver
+          Código</a>
+      </div>
+      <div class="projetos__card">
+        <h3 class="projetos__card__titulo">Frete Inacabado</h3>
+        <p class="projetos__card__descricao">Sistema de logística e cálculo de fretes para otimizar entregas.</p>
+        <a class="projetos__card__botao" href="https://github.com/LoselSpt/Frete-inacabado-" target="_blank">Ver
+          Código</a>
+      </div>
+      <div class="projetos__card">
+        <h3 class="projetos__card__titulo">Conversor de Moedas</h3>
+        <p class="projetos__card__descricao">Conversor de valores monetários em tempo real simples e rápido.</p>
+        <a class="projetos__card__botao" href="https://github.com/LoselSpt/Conversor-de-moedas" target="_blank">Ver
+          Código</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="background-animation">
+    <div class="pacman-runner"></div>
+    <div class="ghost-cursor" id="ghostCursor"></div>
+    <div class="ghost-random ghost-pink"></div>
+    <div class="ghost-random ghost-cyan"></div>
+    <div class="ghost-random ghost-orange"></div>
+  </div>
+
   <footer class="rodape">
     <p class="footer__texto">Desenvolvido por Losel.</p>
   </footer>
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
