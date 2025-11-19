@@ -1,0 +1,14 @@
+{
+  "name": "portifolio-losel",
+  "version": "1.0.0",
+  "description": "Portifólio Gamer Retro",
+  "scripts": {
+    "build": "echo 'No build step necessary for static site'"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "keywords": [],
+  "author": "Losel",
+  "license": "MIT"
+}
